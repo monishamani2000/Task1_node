@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+<style>
+    h2{
+        text-align: center;
+    }
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        margin: auto;
+    }
+    th, td {
+        padding: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+        /* width: 100%; */
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        /* width: 50%; */
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button{
+        background-color: #3b79ec;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <h2>Signup Form</h2>
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <table>
+            <tr> 
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone_number">Phone:</label></td>
+                <td><input type="text" id="phone_number" name="phone_number" pattern="[6-9]{1}[0-9]{9}" title="Phone number should be 10 digits and start with 6, 7, 8, or 9" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="confirm_password">Confirm Password:</label></td>
+                <td><input type="password" id="confirm_password" name="confirm_password" ></td>
+            </tr>
+            <tr>
+                <td><label for="profile_image">Profile Image:</label></td>
+                <td><input type="file" id="profile_image" name="profile_image" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Signup">
+                    <button> <a href="/signin.html"  type="submit">SignIn</a></button></td>
+            </tr>
+            <tr>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
